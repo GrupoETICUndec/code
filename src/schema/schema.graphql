@@ -32,7 +32,7 @@ type Problem{
 }
 
 type Query{
-    getUser: User!
+    getUser(id: ID!): User!
     getProblems: [Problem!]!
     getProblem(problemId: ID!): Problem!
     getSolutions: [Solution]!

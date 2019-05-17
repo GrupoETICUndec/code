@@ -9,7 +9,7 @@ const problemSchema= new Schema({
     name: { type : String , unique : true, required : true },
     description: { type : String, required : true },
     testCases:[testCaseSchema],
-    owner: {type: Schema.Types.ObjectId, ref: 'User', required: true }
+    owner: {type: Schema.Types.ObjectId, ref: 'User', required:true}
 })
 
 
