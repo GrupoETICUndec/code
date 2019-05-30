@@ -1,0 +1,2 @@
+Eliminar los objetos usuarios de mongo
+Utilizar id de usuario de auth0 para mantener informacion sobre ese usuario
