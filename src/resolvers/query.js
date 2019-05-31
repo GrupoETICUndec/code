@@ -18,7 +18,7 @@ module.exports = {
     },
     // getSolutions: [Solution]!
     getSolutions: (parent,_,{user})=>{
-      return Solution.find({owner: user})
+      return Solution.find({owner: user}).populate('problem')
     },
     // getSolution(solutionId: ID!): Solution!
     // TODO check if solution was created by the user who is requiring it
