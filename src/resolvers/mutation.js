@@ -1,5 +1,5 @@
 const { Solution, Problem} = require('../models/index')
-
+const ObjectId = require('mongoose').Types.ObjectId
 
 module.exports = {
   Mutation:{
@@ -44,9 +44,10 @@ module.exports = {
     }
     */
     newSolution: (_,{solutionInput},{user})=>{
-      const {problemId, source_code, language} = solutionInput
+        var {problemId, source_code, language} = solutionInput
+        problemId = ObjectId(JSON.parse(problemId))
         return new Solution({
-          problemId,
+          problem: problemId,
           source_code,
           language,
           owner:user
