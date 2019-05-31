@@ -45,12 +45,12 @@ module.exports = {
     */
     newSolution: (_,{solutionInput},{user})=>{
       const {problemId, source_code, language} = solutionInput
-      return new Solution({
-        problemId,
-        source_code,
-        language,
-        user
-      }).save()
+        return new Solution({
+          problemId,
+          source_code,
+          language,
+          owner:user
+        }).save()
+      }
     }
   }
-}
